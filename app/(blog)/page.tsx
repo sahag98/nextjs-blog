@@ -11,7 +11,11 @@ import PortableText from "./portable-text";
 import type { HeroQueryResult } from "@/sanity.types";
 import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
-import { heroQuery, settingsQuery } from "@/sanity/lib/queries";
+import {
+  heroQuery,
+  moreStoriesQuery,
+  settingsQuery,
+} from "@/sanity/lib/queries";
 
 function Intro(props: { title: string | null | undefined; description: any }) {
   const title = props.title || demo.title;
@@ -80,6 +84,13 @@ export default async function Page() {
     }),
     sanityFetch({ query: heroQuery }),
   ]);
+  // const data = await sanityFetch({
+  //   query: moreStoriesQuery,
+  //   params: {
+  //     skip: "",
+  //     limit: 100,
+  //   },
+  // });
 
   return (
     <div className="container mx-auto px-5">
@@ -99,7 +110,7 @@ export default async function Page() {
       {heroPost?._id && (
         <aside>
           <h2 className="mb-8 text-6xl font-bold leading-tight tracking-tighter md:text-7xl">
-            More Stories
+            More Blogs
           </h2>
           <Suspense>
             <MoreStories skip={heroPost._id} limit={100} />
