@@ -2,7 +2,7 @@
  * Demo data used as placeholders and initial values for the blog
  */
 
-export const title = "Website name here.";
+export const title = "Rooted Truth";
 
 export const description = [
   {
@@ -13,7 +13,7 @@ export const description = [
         _key: "4a58edd077880",
         _type: "span",
         marks: [],
-        text: "Maybe a short bible verse here? ",
+        text: "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me. - John 14:6",
       },
     ],
     markDefs: [
