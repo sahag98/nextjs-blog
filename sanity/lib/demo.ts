@@ -13,7 +13,7 @@ export const description = [
         _key: "4a58edd077880",
         _type: "span",
         marks: [],
-        text: "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me. - John 14:6",
+        text: "Jesus said to him, “I am the way, and the truth, and the life. No one comes to the Father except through me.",
       },
     ],
     markDefs: [
