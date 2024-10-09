@@ -19,6 +19,8 @@ import { sanityFetch } from "@/sanity/lib/fetch";
 import { settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 
+import { Analytics } from "@vercel/analytics/react";
+
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await sanityFetch({
     query: settingsQuery,
@@ -111,6 +113,7 @@ export default function RootLayout({
         </section>
         {draftMode().isEnabled && <VisualEditing />}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
