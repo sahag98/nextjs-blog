@@ -24,12 +24,18 @@ function Intro(props: { title: string | null | undefined; description: any }) {
     : demo.description;
   return (
     <section className="mt-16 mb-16 flex flex-col items-center lg:mb-12 lg:flex-row lg:justify-between">
-      <h1 className="text-balance text-6xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl">
-        {title || demo.title}
-      </h1>
-      <h2 className="text-pretty mt-5 text-center text-base lg:pl-8 lg:text-left">
+      <div className="space-y-1">
+        <h1 className="text-balance text-5xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl">
+          {title || demo.title}
+        </h1>
+        <p>
+          Blogs centered on biblical truths that connect scriptural insights
+          with real-life questions about Christianity.
+        </p>
+      </div>
+      <h2 className="text-pretty mt-5 text-left text-sm lg:pl-8 lg:text-left">
         <PortableText
-          className="prose-lg"
+          className="md:prose-base prose-sm"
           value={description?.length ? description : demo.description}
         />
       </h2>
